@@ -78,7 +78,6 @@ button:hover {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 1000px;
   margin: auto;
 }
 

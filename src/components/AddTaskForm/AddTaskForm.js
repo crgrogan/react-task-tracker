@@ -23,7 +23,7 @@ const AddTask = ({ isFormOpen, addTask }) => {
   };
 
   return (
-    <Container>
+    <>
       {isFormOpen && (
         <form className="task-form" onSubmit={handleSubmit}>
           <div className="task-form-input">
@@ -49,7 +49,7 @@ const AddTask = ({ isFormOpen, addTask }) => {
           <Button text="Add" width="100%"></Button>
         </form>
       )}
-    </Container>
+    </>
   );
 };
 

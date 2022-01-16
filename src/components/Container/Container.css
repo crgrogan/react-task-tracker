@@ -1,3 +1,8 @@
 .container {
   padding: 0 30px;
 }
+
+.mw {
+  max-width: 1000px;
+  margin: auto;
+}
