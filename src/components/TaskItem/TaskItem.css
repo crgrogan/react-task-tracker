@@ -1,0 +1,21 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 1em 2em;
+  margin-bottom: 1em;
+}
+
+.item-description,
+.item-time {
+  margin: 0;
+}
+
+.item-description {
+  margin-bottom: 1em;
+}
+
+.completed {
+  border-left: 5px solid green;
+}

@@ -17,7 +17,7 @@ const Header = () => {
       <header className="header">
         <h1>Task Tracker</h1>
         {isFormOpen ? (
-          <Button text="Close" bgColor="red" handleClick={toggleForm}></Button>
+          <Button text="Close" bgColor="red" clickHandler={toggleForm}></Button>
         ) : (
           <Button
             text="Add Task"

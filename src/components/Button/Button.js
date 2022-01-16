@@ -8,7 +8,7 @@ const Button = ({
   padding = "0.75em 1.5em",
   color = "white",
   fontSize = "1.6rem",
-  handleClick,
+  clickHandler,
 }) => {
   return (
     <button
@@ -19,7 +19,7 @@ const Button = ({
         color: color,
         fontSize: fontSize,
       }}
-      onClick={handleClick}
+      onClick={clickHandler}
     >
       {text}
     </button>
