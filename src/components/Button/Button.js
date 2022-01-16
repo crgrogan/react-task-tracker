@@ -8,6 +8,7 @@ const Button = ({
   padding = "0.75em 1.5em",
   color = "white",
   fontSize = "1.6rem",
+  width = "auto",
   clickHandler,
 }) => {
   return (
@@ -15,9 +16,10 @@ const Button = ({
       className="btn"
       style={{
         backgroundColor: bgColor,
-        padding: padding,
-        color: color,
-        fontSize: fontSize,
+        padding,
+        color,
+        fontSize,
+        width,
       }}
       onClick={clickHandler}
     >

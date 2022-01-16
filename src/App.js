@@ -2,16 +2,13 @@ import "./App.css";
 import { useState } from "react";
 
 import Header from "./components/Header/Header";
-import AddTask from "./components/AddTask/AddTask";
+import AddTaskForm from "./components/AddTaskForm/AddTaskForm";
 import TaskList from "./components/TaskList/TaskList";
 import Footer from "./components/Footer/Footer";
 
 const App = () => {
-  const [tasks, setTasks] = useState([
-    { id: 1, description: "Task 1", time: "8:00 am", isCompleted: true },
-    { id: 2, description: "Task 2", time: "5:00 pm", isCompleted: false },
-    { id: 3, description: "Task 3", time: "10:00 pm", isCompleted: false },
-  ]);
+  const [tasks, setTasks] = useState([]);
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   const toggleCompletedStatus = (id) => {
     setTasks((prevTasks) =>
@@ -27,12 +24,20 @@ const App = () => {
     setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
   };
 
+  const addTask = (task) => {
+    setTasks((prevTasks) => [...prevTasks, task]);
+  };
+
+  const toggleForm = () => {
+    setIsFormOpen((prevState) => !prevState);
+  };
+
   return (
     <div className="wrapper">
       <div className="content">
-        <Header></Header>
+        <Header isFormOpen={isFormOpen} toggleForm={toggleForm}></Header>
         <main>
-          <AddTask></AddTask>
+          <AddTaskForm isFormOpen={isFormOpen} addTask={addTask}></AddTaskForm>
           <TaskList
             tasks={tasks}
             toggleCompletedStatus={toggleCompletedStatus}

@@ -1,0 +1,19 @@
+.task-form {
+  margin: 3em auto;
+  width: 50%;
+}
+
+.task-form-input {
+  margin-bottom: 2em;
+}
+
+.task-form label {
+  margin-bottom: 1em;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.task-form input {
+  width: 100%;
+  padding: 0.75em 0.5em;
+}

@@ -5,13 +5,7 @@ import "./Header.css";
 import Container from "../Container/Container";
 import Button from "../Button/Button";
 
-const Header = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
-  const toggleForm = () => {
-    setIsFormOpen((prevState) => !prevState);
-  };
-
+const Header = ({ toggleForm, isFormOpen }) => {
   return (
     <Container>
       <header className="header">
@@ -22,7 +16,7 @@ const Header = () => {
           <Button
             text="Add Task"
             bgColor="green"
-            handleClick={toggleForm}
+            clickHandler={toggleForm}
           ></Button>
         )}
       </header>

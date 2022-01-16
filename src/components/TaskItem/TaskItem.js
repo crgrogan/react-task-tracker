@@ -24,6 +24,7 @@ const TaskItem = ({ task, toggleCompletedStatus, deleteTask }) => {
       <Button
         text="Delete"
         padding="0.5em"
+        bgColor="red"
         clickHandler={handleDelete}
       ></Button>
     </li>
