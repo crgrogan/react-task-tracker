@@ -1,7 +1,7 @@
 .task-form {
   padding: 2em 0;
   margin: auto;
-  width: 40%;
+  width: 50%;
 }
 
 .task-form-input,
@@ -30,6 +30,10 @@
   padding: 0.75em 0.5em;
   border: 1px solid black;
   border-radius: 3px;
+}
+
+@media screen and (min-width: 769px) {
+  min-width: 350px;
 }
 
 @media screen and (max-width: 768px) {
