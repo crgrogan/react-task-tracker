@@ -35,17 +35,17 @@ const App = () => {
   return (
     <div className="wrapper">
       <div className="content">
-        <Header isFormOpen={isFormOpen} toggleForm={toggleForm}></Header>
+        <Header isFormOpen={isFormOpen} toggleForm={toggleForm} />
         <main>
-          <AddTaskForm isFormOpen={isFormOpen} addTask={addTask}></AddTaskForm>
+          {isFormOpen && <AddTaskForm addTask={addTask} />}
           <TaskList
             tasks={tasks}
             toggleCompletedStatus={toggleCompletedStatus}
             deleteTask={deleteTask}
-          ></TaskList>
+          />
         </main>
       </div>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 };

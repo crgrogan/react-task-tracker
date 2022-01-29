@@ -11,13 +11,13 @@ const Header = ({ toggleForm, isFormOpen }) => {
       <header className="header">
         <h1>Task Tracker</h1>
         {isFormOpen ? (
-          <Button text="Close" bgColor="red" clickHandler={toggleForm}></Button>
+          <Button bgColor="red" clickHandler={toggleForm}>
+            Close
+          </Button>
         ) : (
-          <Button
-            text="Add Task"
-            bgColor="green"
-            clickHandler={toggleForm}
-          ></Button>
+          <Button bgColor="green" clickHandler={toggleForm}>
+            Add Task
+          </Button>
         )}
       </header>
     </Container>

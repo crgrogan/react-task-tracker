@@ -3,7 +3,7 @@ import React from "react";
 import "./Button.css";
 
 const Button = ({
-  text,
+  children,
   bgColor = "black",
   padding = "0.75em 1.5em",
   color = "white",
@@ -23,7 +23,7 @@ const Button = ({
       }}
       onClick={clickHandler}
     >
-      {text}
+      {children}
     </button>
   );
 };

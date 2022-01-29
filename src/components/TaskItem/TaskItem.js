@@ -21,12 +21,11 @@ const TaskItem = ({ task, toggleCompletedStatus, deleteTask }) => {
         <h4 className="item-description">{task.description}</h4>
         <p className="item-time">{task.time}</p>
       </div>
-      <Button
-        text="Delete"
-        padding="0.5em"
-        bgColor="red"
-        clickHandler={handleDelete}
-      ></Button>
+      <div>
+        <Button padding="0.5em" bgColor="red" clickHandler={handleDelete}>
+          Delete
+        </Button>
+      </div>
     </li>
   );
 };
